@@ -1,9 +1,11 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
-
-const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+
+const connect = require('./db/database');
+
+connect;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
