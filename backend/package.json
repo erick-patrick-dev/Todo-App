@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon",
+    "production": "pm2 start index.js --name 'todoapp'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
