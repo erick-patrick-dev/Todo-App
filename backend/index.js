@@ -2,6 +2,9 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const cors = require('./cors');
+
+
 
 const connect = require('./db/database');
 connect;
@@ -9,6 +12,7 @@ connect;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors);
 
 // Rotas da API
 const todoRoutes = require('./routes/todoRoutes');
