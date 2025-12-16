@@ -4,7 +4,6 @@ import IconButton from "../template/iconButton.jsx";
 
 export default props => (
 
-    
     <div role="form" className="todoForm">
         <Grid cols="12 9 10">
             <input id="description" className="form-control" 
@@ -12,7 +11,8 @@ export default props => (
         </Grid>
 
         <Grid cols="col-xs-12 col-sm-3 col-md-2">
-            <IconButton style='primary' icon='plus' /> 
+            <IconButton style='primary' icon='plus' 
+                onClick={props.handleAdd} /> 
         </Grid>
     </div>
 )
