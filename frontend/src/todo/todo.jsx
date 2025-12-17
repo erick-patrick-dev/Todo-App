@@ -1,7 +1,11 @@
 import React, { Component } from "react";
+import axios from "axios";
+
 import PageHeader from "../template/PageHeader";
 import TodoForm from "./todoForm";
 import TodoList from "./todoList";
+
+const URL = 'http://localhost:3005/api/todos'
 
 export default class Todo extends Component {
 
@@ -17,7 +21,9 @@ export default class Todo extends Component {
     }
 
     handleAdd() {
-        console.log(this)
+        const description = this.state.description
+        axios.post(URL, { description })
+            .then(resp => console.log("Cadastrado com sucesso"))
     }
 
     render() {
