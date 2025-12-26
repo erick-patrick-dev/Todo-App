@@ -31,7 +31,7 @@ export default class Todo extends Component {
             .then(resp => this.setState({ ...this.state, description, list: resp.data }))
     }
 
-    handleSearch(){
+    handleSearch() {
         this.refresh(this.state.description)
         console.log(this.state.description)
     }
@@ -75,9 +75,9 @@ export default class Todo extends Component {
                     handleChange={this.handleChange}
                     handleClear={this.handleClear}
                     handleAdd={this.handleAdd} />
-                    
-                
-                <TodoList 
+
+
+                <TodoList
                     list={this.state.list}
                     handleMarkAsDone={this.handleMarkAsDone}
                     handleMarkAsPending={this.handleMarkAsPending}
