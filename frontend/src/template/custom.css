@@ -7,3 +7,27 @@
     text-decoration: line-through;
     color: #777;
 }
+
+.tableActions {
+    width: 170px;
+}
+
+.todoForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todoForm .form-control {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-right: 8px;
+}
+
+.todoForm-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
